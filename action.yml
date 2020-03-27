@@ -1,15 +1,8 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+name: 'jsonnetfmt'
+description: 'Run jsonnetfmt to check if jsonnet files are formatted in current workspace'
+branding:
+  icon: 'feather'
+  color: 'blue'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
